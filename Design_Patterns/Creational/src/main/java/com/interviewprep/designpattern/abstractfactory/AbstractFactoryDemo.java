@@ -7,6 +7,7 @@
 package com.interviewprep.designpattern.abstractfactory;
 
 /**
+ * Usage of Abstract Factory Pattern
  * @author raghavdutta
  *
  */
