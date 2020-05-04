@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
+import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
@@ -38,17 +39,18 @@ public class ApplicationSwaggerConfig {
 				.select()
 				.apis(RequestHandlerSelectors.basePackage("com.learnswagger.demo"))
 				.paths(PathSelectors.any())
-				.build();
+				.build()
+				.apiInfo(apiInfo());
 	}
 	
 	private ApiInfo apiInfo() {
-	    return new ApiInfo(
-	      "My EMPLOYEE REST API", 
-	      "Some custom description of API.", 
-	      "API TOS", 
-	      "Terms of service", 
-	      new Contact("Raghav Dutta", "www.example.com", "raghav@company.com"), 
-	      "License of API", "API license URL", Collections.emptyList());
+	    return new ApiInfoBuilder()
+	    		.title("Employee API")
+	    		.version("1.0")
+	    		.description("API for managing clients")
+	    		.contact(new Contact("Raghav", "https://github.com/RaghavDutta/InterviewPrep", "raghav@example.com"))
+	    		.license("Apache Licence Version 2.0")
+	    		.build();
 	}
 
 }
