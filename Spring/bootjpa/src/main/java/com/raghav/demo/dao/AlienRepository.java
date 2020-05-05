@@ -3,12 +3,12 @@ package com.raghav.demo.dao;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
 
 import com.raghav.demo.model.Alien;
 
-public interface AlienRepository extends CrudRepository<Alien, Integer> {
+public interface AlienRepository extends JpaRepository<Alien, Integer> {
 
 	List<Alien> findByTech(String tech);
 
