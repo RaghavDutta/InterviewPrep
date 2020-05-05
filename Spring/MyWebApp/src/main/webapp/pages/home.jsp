@@ -7,6 +7,6 @@ pageEncoding="UTF-8"%>
 <title>Insert title here</title>
 </head>
 <body>
-	I love java
+	Welcome ${name}, I love java!
 </body>
 </html>
