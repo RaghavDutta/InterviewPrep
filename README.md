@@ -1,2 +1,2 @@
 # Intro
-GitHub repository for learning Design Patterns
+GitHub repository for preparation for Interviews
