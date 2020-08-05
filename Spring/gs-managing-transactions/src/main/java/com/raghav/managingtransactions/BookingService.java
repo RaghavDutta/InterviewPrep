@@ -27,7 +27,7 @@ public class BookingService {
 		}
 	}
 	
-	public List<String> findAllBookins(){
+	public List<String> findAllBookings(){
 		return jdbcTemplate.query("select FIRST_NAME from BOOKINGS", (rs,rowNm)->rs.getString("FIRST_NAME"));
 	}
 	
