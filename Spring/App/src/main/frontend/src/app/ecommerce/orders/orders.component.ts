@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductOrder } from '../models/product-order';
+import { ProductOrders } from '../models/product-orders';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-orders',
@@ -6,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./orders.component.css']
 })
 export class OrdersComponent implements OnInit {
+  orders: ProductOrders;
+  total: number;
+  paid: boolean;
+  sub: Subscription;
 
   constructor() { }
 
