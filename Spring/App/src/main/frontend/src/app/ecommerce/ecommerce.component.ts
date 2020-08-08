@@ -9,7 +9,7 @@ import { ProductsComponent } from './products/products.component';
   styleUrls: ['./ecommerce.component.css']
 })
 export class EcommerceComponent implements OnInit {
-  private collapsed = true;
+  collapsed = true;
   orderFinished = false;
 
   @ViewChild('productsC')
@@ -20,10 +20,12 @@ export class EcommerceComponent implements OnInit {
 
   @ViewChild('ordersC')
   ordersC: OrdersComponent;
-  
-  constructor() {}
 
-  ngOnInit() {}
+  constructor() {
+  }
+
+  ngOnInit() {
+  }
 
   toggleCollapsed(): void {
     this.collapsed = !this.collapsed;
@@ -35,9 +37,9 @@ export class EcommerceComponent implements OnInit {
 
   reset() {
     this.orderFinished = false;
-    this.shoppingCartC.reset();
     this.productsC.reset();
+    this.shoppingCartC.reset();
     this.ordersC.paid = false;
-  }
+    }
 
 }

@@ -1,22 +1,23 @@
 package com.inhouse.ecommerce.service;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.inhouse.ecommerce.model.OrderProduct;
+import com.inhouse.ecommerce.repository.IOrderProductRepository;
 
+@Service
+@Transactional
 public class OrderProductService implements IOrderProductService {
 
-	private IOrderProductService orderProductRepository;
-	
-	public OrderProductService(IOrderProductService orderProductRepository) {
+	private IOrderProductRepository orderProductRepository;
+
+	public OrderProductService(IOrderProductRepository orderProductRepository) {
 		this.orderProductRepository = orderProductRepository;
 	}
-	//FIXME: changes in create method
 	@Override
 	public OrderProduct create(OrderProduct orderProduct) {
-		//
-		return null;
+		return this.orderProductRepository.save(orderProduct);
 	}
 
 }

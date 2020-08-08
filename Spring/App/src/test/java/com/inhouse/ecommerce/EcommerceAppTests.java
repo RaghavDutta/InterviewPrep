@@ -27,8 +27,8 @@ import com.inhouse.ecommerce.model.Order;
 import com.inhouse.ecommerce.model.Product;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = { AppApplication.class }, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class AppApplicationTests {
+@SpringBootTest(classes = { EcommerceApp.class }, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+class EcommerceAppTests {
 
 	@Autowired private TestRestTemplate restTemplate;
 

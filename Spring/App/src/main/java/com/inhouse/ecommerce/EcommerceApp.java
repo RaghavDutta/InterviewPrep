@@ -9,11 +9,11 @@ import com.inhouse.ecommerce.model.Product;
 import com.inhouse.ecommerce.service.ProductService;
 
 @SpringBootApplication
-public class AppApplication {
+public class EcommerceApp {
 
 
     public static void main(String[] args) {
-        SpringApplication.run(AppApplication.class, args);
+        SpringApplication.run(EcommerceApp.class, args);
     }
 
     @Bean

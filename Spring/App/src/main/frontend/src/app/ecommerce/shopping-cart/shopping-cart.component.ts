@@ -15,7 +15,7 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
     total: number;
     sub: Subscription;
 
-    @Output() onOrderFinished: BehaviorSubject<boolean>;
+    onOrderFinished: BehaviorSubject<boolean>;
 
     constructor(private ecommerceService: EcommerceService) {
         this.total = 0;
@@ -39,6 +39,7 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
 
     ngOnDestroy() {
         this.sub.unsubscribe();
+        this.onOrderFinished.unsubscribe();
     }
 
     finishOrder() {
